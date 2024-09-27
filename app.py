@@ -66,7 +66,7 @@ def submit_contact():
         return jsonify({'message': f'Failed to save contact: {e}'}), 500
 
     # Send notification email
-    if not send_email(name, email, message):
+    if not send_email(name, email,phone, message):
         return jsonify({'message': 'Failed to send notification email!'}), 500
 
     # Print received data for debugging
@@ -75,12 +75,12 @@ def submit_contact():
     return jsonify("Thank you for submitting the form!")
 
 # Function to send email using Flask-Mail
-def send_email(name, email, message):
+def send_email(name, email, phone, message):
     try:
         msg = Message('New Contact Form Submission',
                       sender=app.config['MAIL_USERNAME'],
                       recipients=['skrestaurant24@gmail.com'])  # Replace with the recipient's email
-        msg.body = f'Name: {name}\nEmail: {email}\nMessage: {message}'
+        msg.body = f'Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}'
 
         # Send email
         mail.send(msg)
