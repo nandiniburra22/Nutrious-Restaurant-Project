@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 500; /* changed to appropriate weight */
+}
+
+.btn-primary {
+  color: #fff;
+  background: #001a14;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #001d17;
+}
+
+/* Navbar Styles */
+.navbar {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  background: #aac7ec;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #010f0e;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 2.3rem;
+}
+
+/* Showcase Area Styles */
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(167, 140, 241, 0.144),
+      rgba(37, 34, 68, 0.315)
+    ),
+    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+
+/* About Us Section */
+#about {
+  padding: 50px 0;
+  background: #d8e3ee;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 2.3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #200202;
+}
+
+#about .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.about-img,
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+.about-text {
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+/* Food Category Styles */
+#food {
+  padding: 5rem 0 10rem 0;
+}
+
+#food h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #11010a;
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-container img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+/* Food Menu Styles */
+.food-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #021016;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0 30px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 5rem 0;
+  background: rgb(193, 212, 231);
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #011c1f;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.testimonial-box .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: #0c0101;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+
+
+
+#contact {
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 50px 0; /* Space around the section */
+}
+
+.contact-title {
+  text-align: center; /* Center the title */
+  margin-bottom: 30px; /* Space below the title */
+  font-size: 2em; /* Larger title size */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center; /* Center the form */
+  align-items: center; /* Align items vertically */
+}
+
+form {
+  background-color: #ffffff; /* Form background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Internal padding */
+  width: 300px; /* Fixed width for square effect */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+}
+
+input, textarea {
+  width: 100%; /* Full width of the form */
+  padding: 10px; /* Padding for input fields */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded borders */
+}
+
+button {
+  padding: 10px; /* Button padding */
+  border: none; /* No border */
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded button */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+}
+
+#thank-you-message {
+  margin-top: 20px; /* Space above thank you message */
+  color: green; /* Green text color */
+  text-align: center; /* Center the message */
+}
+/* Main container for the three sections */
+.info-section {
+  display: flex;
+  justify-content: space-around;   /* Spreads the sections evenly */
+  align-items: flex-start;         /* Aligns items to the top */
+  padding: 20px;                   /* Adds padding around the section */
+  background-color: #f4f4f4;       /* Light background for contrast */
+  margin-top: 20px;
+}
+
+/* Each info-box has equal space and is aligned in the middle */
+.info-box {
+  flex: 1;                         /* Makes each box take equal space */
+  margin: 0 20px;                  /* Adds space between the boxes */
+  text-align: center;              /* Center-aligns the text */
+}
+
+/* Style for the headings inside each info-box */
+.info-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;                     /* Darker heading text */
+}
+
+/* Style for the paragraphs inside each info-box */
+.info-box p {
+  font-size: 1rem;
+  color: #555;                     /* Lighter text color for body text */
+}
+
+/* Newsletter form styles */
+.info-box form {
+  display: flex;
+  justify-content: center;         /* Centers the form elements */
+  align-items: center;
+}
+
+/* Email input field styles */
+.info-box form input[type="email"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* Newsletter submit button styles */
+.info-box form button {
+  padding: 10px 20px;
+  background-color: #ff6347;       /* Tomato red background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.info-box form button:hover {
+  background-color: #ff4500;       /* Darker red on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .info-section {
+      flex-direction: column;      /* Stacks the boxes vertically on smaller screens */
+      text-align: center;
+  }
+  
+  .info-box {
+      margin-bottom: 20px;         /* Adds spacing between the boxes when stacked */
+  }
+}
+.navbar {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  background: #aac7ec;
+  color: #1b0202;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}

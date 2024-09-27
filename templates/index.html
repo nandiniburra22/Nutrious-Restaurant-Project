@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <!-- Title on the left side -->
+            <div class="title">
+                <h1 class="logo">SK Nutritious Food Center</h1>
+            </div>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home" textalign = "Right"class="scroll-link">Home</a></li>
+                <li><a href="#about" textalign = "Right" class="scroll-link">About</a></li>
+                <li><a href="#food" textalign = "Right"class="scroll-link">Category</a></li>
+                <li><a href="#food-menu" textalign = "Right"class="scroll-link">Menu</a></li>
+                <li><a href="#testimonials" textalign = "Right"class="scroll-link">Testimonial</a></li>
+                <li><a href="#contact" textalign = "Right" class="scroll-link">Contact</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Fresh Feast Haven</h1>
+            <p>Nourish your body with wholesome food, because true health begins on your plate.</p>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About Us</p>
+                <h2>Serving nutritious and delicious food for 10 years and counting</h2>
+                <p>
+                    At SK Nutritious Food Centre, we pride ourselves on offering meals that are not only
+                    delicious but also packed with the goodness your body needs. For over 10 years, we have
+                    been committed to creating dishes that delight the senses while fueling your well-being.
+                    Our passion for fresh ingredients and culinary creativity ensures that every plate is a
+                    blend of taste, health, and happiness. Join us and experience food that nourishes both
+                    body and soul.
+
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg" alt="food" />
+            </div>
+        </div>
+    </section>
+
+    <section id="food">
+        <h2>Types of Nutritious food</h2>
+        <div class="food-container container">
+            <div class="food-type fruit">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Fruit</h3>
+                        <a href="https://en.wikipedia.org/wiki/Fruit" class="btn btn-primary" target="_blank">Learn
+                            more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetable">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Vegetable</h3>
+                        <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary" target="_blank">Learn
+                            more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type grain">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Grain</h3>
+                        <a href="https://en.wikipedia.org/wiki/Grain" class="btn btn-primary" target="_blank">Learn
+                            more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="food-menu">
+        <h2 class="food-menu-heading">Our Menu</h2>
+        <div class="food-menu-container container">
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-title">Vegetable Salads</h2>
+                    <p>Refresh your senses with our vibrant vegetable salads, bursting with fresh, crunchy veggies and drizzled with zesty dressings. A perfect blend of health and flavor!</p>
+                    <ul>
+                        <li><strong>Garden Fresh Salad</strong> </li>
+                        <li><strong>Greek Salad</strong> </li>
+                        <li><strong>Quinoa Salad</strong> </li>
+                        <li><strong>Caesar Salad</strong> </li>
+                    </ul>
+                    <p class="food-price">Price: &#8377; 250</p>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg" alt="error" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-title">Oatmeal Desserts</h2>
+                    <p>Indulge in our delightful oatmeal desserts—sweet, wholesome treats that satisfy your cravings while keeping it healthy!</p>
+                    <ul>
+                        <li><strong>Oatmeal Chocolate Chip Cookies</strong> </li>
+                        <li><strong>Maple Oatmeal Bars</strong> </li>
+                        <li><strong>Fruit and Nut Oatmeal Cups</strong> </li>
+                        <li><strong>Banana Oatmeal Muffins</strong> </li>
+                    </ul>
+                    <p class="food-price">Price: &#8377; 350</p>
+                </div>
+                
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="{{ url_for('static', filename='images/soup name.jpg') }}" alt="Delicious Soups" />
+                </div>
+                
+                <div class="food-description">
+                    <h2 class="food-title">Hot Vegaterian Soups</h2>
+                    <p>Delight in our range of soul-warming soups, meticulously crafted to offer comfort and flavor. Each bowl is a nourishing embrace, filled with vibrant ingredients and aromatic spices that will leave you feeling revitalized.</p>
+                    <ul>
+                        <li><strong>Roasted Red Pepper & Tomato Soup</strong> </li>
+                        <li><strong>Spicy Thai Coconut Soup</strong> </li>
+                        <li><strong>Wild Mushroom Soup</strong> </li>
+                        <li><strong>Classic Chicken and Rice Soup</strong> </li>
+                    </ul>
+                    <p class="food-price">Price: &#8377; 170</p>
+                </div>
+                
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-title">Mixed Grain Salads</h2>
+                    <p>Enjoy a burst of wholesome grains and fresh ingredients in every bite. These salads are not only delicious but also packed with essential nutrients to fuel your day.</p>
+                    <ul>
+                        <li><strong>Quinoa & Avocado Salad</strong> </li>
+                        <li><strong>Barley & Roasted Veggie Salad</strong> </li>
+                        <li><strong>Farro & Spinach Super Salad</strong> </li>
+                        <li><strong>Brown Rice & Chickpea Delight</strong> </li>
+                    </ul>
+                    <p class="food-price">Price: &#8377; 550</p>
+                </div>
+                
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="{{ url_for('static', filename='images/Fruit Milk.jpg') }}" alt="Fruit Milkshake" />
+                </div>
+                
+                <div class="food-description">
+                    <h2 class="food-title">Delightful Milkshakes</h2>
+                    <p>Our milkshakes are the perfect blend of creamy textures and refreshing flavors. Indulge in these delicious shakes, made to satisfy your sweet cravings.</p>
+                    <ul>
+                        <li><strong>Classic Kiwi Vanilla Shake</strong></li>
+                        <li><strong>Chocolate Fudge Shake</strong></li>
+                        <li><strong>Strawberry Dream shakes</strong></li>
+                        <li><strong>Banana Oatmeal Muffins</strong> </li> <!-- Added the missing closing tag -->
+                    </ul>
+                    <p class="food-price">Price: &#8377; 150</p>
+                </div>
+                
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-title">Refreshing Fruit Salads</h2>
+                    <p>Indulge in our vibrant fruit salads, bursting with freshness and flavor. Each bowl is a delightful mix of seasonal fruits, drizzled with a hint of honey and topped with a sprinkle of mint.</p>
+                    <ul>
+                        <li><strong>Tropical Paradise Salad</strong> </li>
+                        <li><strong>Berry Delight Salad</strong> </li>
+                        <li><strong>Citrus Medley Salad</strong> </li>
+                        <li><strong>Melon Fiesta Salad</strong> </li>
+                        <li><strong>Apple Walnut Crunch Salad</strong> </li>
+                    </ul>
+                    <p class="food-price">Price: &#8377; 120</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="testimonial-title">What Our Customers Say</h2>
+        <div class="testimonial-container container">
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        <img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="" />
+                        <p class="customer-name">Karthik Paritala</p>
+                    </div>
+                </div>
+                <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="testimonial-text">
+                    "SK Nutritious Food Centre never disappoints! Each dish is packed with flavor,
+                     and the warm atmosphere makes every meal a joy. 
+                     Highly recommend for anyone seeking healthy and delicious options!"
+                </p>
+                
+            </div>
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        <img src="{{ url_for('static', filename='images/Review Img.jpg') }}" alt="" />
+
+                        <p class="customer-name">Siddaiah Goud</p>
+                    </div>
+                </div>
+                <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="testimonial-text">
+                    "Every visit to SK Nutritious Food Centre is a delightful experience! 
+                    The flavors are vibrant and the dishes are beautifully presented. 
+                    I always leave feeling satisfied and eager to return!"
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="contact-title">Contact</h2>
+        <div class="contact-container container">
+            <form id="contact-form" action="/submit_contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="thank-you-message" style="display:none;"></div>
+        </div>
+    </section>
+    
+
+    
+    <section class="info-section">
+        <!-- First info-box for Our Address -->
+        <div class="info-box">
+            <h4>Our Address</h4>
+            <p>Pusalapalem Tekkemitta, Andhrapradesh, Nellore District, India</p>
+        </div>
+        
+        <!-- Second info-box for Working Hours -->
+        <div class="info-box">
+            <h4>Working Hours</h4>
+            <p>Mon - Fri: 9:00 AM - 9:00 PM</p>
+            <p>Sat - Sun: 10:00 AM - 10:00 PM</p>
+        </div>
+        
+        <!-- Third info-box for Newsletter -->
+        <div class="info-box">
+            <h4>Newsletter</h4>
+            <p>Subscribe to receive our latest updates.</p>
+            <form action="/subscribe" method="POST">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="social-media">
+            <p>We Are Social:</p>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+    
+
+    <!-- Existing footer code -->
+    <footer>
+        <div class="footer-container container">
+            <p>&copy; 2024 SK Restaurant. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
