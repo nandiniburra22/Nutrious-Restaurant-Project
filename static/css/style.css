@@ -44,6 +44,49 @@ body {
 .btn-primary:hover {
   background: #001d17;
 }
+/* Header Section */
+header {
+  background-color: #333; /* Dark background for the header */
+  color: #fff; /* White text color */
+  padding: 10px 0; /* Padding on top and bottom */
+  text-align: center; /* Center the content */
+  font-family: 'Roboto', sans-serif; /* Apply a clean font */
+}
+
+header .contact-info {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Align items vertically in the middle */
+  gap: 30px; /* Space between phone and email */
+  font-size: 16px; /* Font size for contact info */
+}
+
+header .contact-info span {
+  color: #fff; /* White text */
+  display: flex; /* Use flexbox for the icons */
+  align-items: center; /* Vertically align the text with icons */
+}
+
+header .contact-info i {
+  margin-right: 10px; /* Space between the icon and text */
+  font-size: 18px; /* Set the icon size */
+  color: #f9c208; /* Set the icon color (same as text highlight) */
+}
+
+header .contact-info a {
+  color: #fff; /* White text for the links */
+  text-decoration: none; /* Remove underline */
+}
+
+header .contact-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+header .contact-info strong {
+  color: #f9c208; /* Highlight the labels in a yellow-gold color */
+}
+
+
 
 /* Navbar Styles */
 .navbar {
